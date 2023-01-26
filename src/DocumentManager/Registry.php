@@ -2,6 +2,8 @@
 
 namespace VolodymyrKlymniuk\ElasticBundle\DocumentManager;
 
+use VolodymyrKlymniuk\StdLib\Exception\NotFoundException;
+
 class Registry
 {
     /**

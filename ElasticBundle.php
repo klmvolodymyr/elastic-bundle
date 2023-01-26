@@ -1,6 +1,6 @@
 <?php
 
-namespace VolodymyrKlymniuk\ElasticBundle;
+namespace VolodymyrKlymniuk\ElasticBundle\Source;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;

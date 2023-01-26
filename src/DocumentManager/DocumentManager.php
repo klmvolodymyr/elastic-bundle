@@ -2,6 +2,15 @@
 
 namespace VolodymyrKlymniuk\ElasticBundle\DocumentManager;
 
+use Elastica\Document;
+use Elastica\Query\MatchAll;
+use Elasticsearch\Endpoints\Index;
+use VolodymyrKlymniuk\ElasticBundle\Elastic\Connection;
+use VolodymyrKlymniuk\ElasticBundle\Elastic\IndexSchema;
+use VolodymyrKlymniuk\ElasticBundle\Elastic\Searcher;
+use VolodymyrKlymniuk\ElasticBundle\ResultTransformer\ElasticResultTransformer;
+use VolodymyrKlymniuk\LazyResultLib\ResultTransformer\ResultTransformerInterface;
+
 class DocumentManager
 {
     const RETRY_ON_CONFLICT = 3;

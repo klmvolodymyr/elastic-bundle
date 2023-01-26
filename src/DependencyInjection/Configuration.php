@@ -3,6 +3,7 @@
 namespace VolodymyrKlymniuk\ElasticBundle\DependencyInjection;
 
 use Psr\Log\LoggerInterface;
+use VolodymyrKlymniuk\ElasticBundle\DocumentManager\DocumentManager;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 

@@ -1,20 +1,16 @@
 <?php
 
 namespace VolodymyrKlymniuk\ElasticBundle\DependencyInjection\Compiler;
-//namespace VolodymyrKlymniuk\ElasticBundle\DependecyInjection;
 
+use VolodymyrKlymniuk\ElasticBundle\Fixture\FixtureLoader;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
-
 
 class FixturesCompilerPass implements CompilerPassInterface
 {
     const FIXTURE_TAG = 'elastic.fixture';
 
-    /**
-     * @param ContainerBuilder $container
-     */
     public function process(ContainerBuilder $container)
     {
         $definition = $container->getDefinition(FixtureLoader::class);

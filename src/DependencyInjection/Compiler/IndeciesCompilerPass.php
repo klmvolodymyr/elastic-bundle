@@ -2,6 +2,10 @@
 
 namespace VolodymyrKlymniuk\ElasticBundle\DependencyInjection\Compiler;
 
+use VolodymyrKlymniuk\ElasticBundle\DependencyInjection\ElasticExtension;
+use VolodymyrKlymniuk\ElasticBundle\DocumentManager\Registry;
+use VolodymyrKlymniuk\ElasticBundle\Elastic\Connection;
+use VolodymyrKlymniuk\ElasticBundle\Elastic\IndexSchema;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
@@ -9,9 +13,6 @@ use Symfony\Component\DependencyInjection\Reference;
 
 class IndeciesCompilerPass implements CompilerPassInterface
 {
-    /**
-     * @param ContainerBuilder $container
-     */
     public function process(ContainerBuilder $container)
     {
         $config = $container->getParameter(ElasticExtension::CONFIG_KEY);
